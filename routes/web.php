@@ -5,6 +5,7 @@ use App\Http\Controllers\JournalController;
 use App\Http\Controllers\ChartOfAccountController;
 use App\Http\Controllers\AccountingController;
 use App\Http\Controllers\PlaylistController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,12 +18,7 @@ use App\Http\Controllers\PlaylistController;
 |
 */
 
-Route::prefix('dashboard')->middleware(['auth', 'verified'])->group(function () {
-
-    Route::get('/', function () {
-        return view('welcome');
-    })->name('home');
-});
+Route::get('/',[HomeController::class,'dashboard'])->name('home');
 
 Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     //Accounts routes starts here

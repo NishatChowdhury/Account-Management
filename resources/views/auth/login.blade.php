@@ -3,6 +3,8 @@
 @section('content')
 <div class="login-box">
     <div class="login-logo">
+    <img src="{{ asset('lte/dist/img/login.jpg') }}" alt="AdminLTE Logo"
+            class="brand-image img-circle elevation-3" style="opacity: .8;width: 50px;height: 30px;">
       <a href="../../index2.html"><b>WP</b>Accounts</a>
     </div>
     <!-- /.login-logo -->
